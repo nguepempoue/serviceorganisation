@@ -37,7 +37,7 @@ pipeline{
           stage('Deploy') {
                steps{
                  sh 'docker build -t serviceorganisation .'
-                 sh 'docker run -p 8083:8083 serviceorganisation'
+                 sh 'docker run -p 8083:8083 -d serviceorganisation'
                 }
           }
 
