@@ -1,8 +1,6 @@
 pipeline{
 
-    agent {
-        label "jenkins-agent"
-    }
+    agent any
 
     tools {
         jdk "Java17"
@@ -37,7 +35,7 @@ pipeline{
           stage('Deploy') {
                steps{
                  sh 'docker build -t serviceorganisation .'
-                 sh 'docker run -p 8082:8080 serviceorganisation'
+                 sh 'docker run -p 8083:8083 serviceorganisation'
                 }
           }
 
