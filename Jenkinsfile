@@ -36,8 +36,8 @@ pipeline{
 
           stage('Deploy') {
                steps{
-                 sh 'docker build -t demo-web .'
-                 sh 'docker run -p 8082:8080 demo-web'
+                 sh 'docker build -t serviceorganisation .'
+                 sh 'docker run -p 8082:8080 serviceorganisation'
                 }
           }
 
